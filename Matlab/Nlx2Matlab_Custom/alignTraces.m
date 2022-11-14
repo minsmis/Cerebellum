@@ -16,9 +16,6 @@ function samples = samplingTrace (TimeStamps,startPoint,fs)
     % If startPoint is available --> samples = samplingTrace (TimeStamps, startPoint, fs);
     % If startPoint is not available --> samples = samplingTrace (TimeStamps, [], fs);
 
-    if startPoint ~= []
-        samples = (TimeStamps(:)-startPoint)/fs;
-    else
-        samples = (TimeStamps(:)-TimeStamps(1))/fs;
-    end
+    samples = (TimeStamps(:)-startPoint)/fs;
+    
 end
