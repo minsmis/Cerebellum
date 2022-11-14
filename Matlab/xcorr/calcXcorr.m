@@ -17,7 +17,7 @@ function xcorrValues = calcXcorr(ss1, ss2, startingTimestamp, window)
 
     %% Align traces
     sample1 = alignTraces(ss1, startingTimestamp, samplingFrequency);
-    sample2 = alignTraces(ss2, startpoint, samplingFrequency);
+    sample2 = alignTraces(ss2, startingTimestamp, samplingFrequency);
 
     %% Calculate crosscorrelation using timestamps
     [xcorrValues, idx1, idx2] = tsXcorr(sample2, sample1, window, samplingFrequency);
